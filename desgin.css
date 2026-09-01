@@ -1,0 +1,1067 @@
+/* =========================================
+   GCE 2026
+   VIP INVITATION
+   MODERN MOBILE DESIGN
+========================================= */
+
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+  --navy: #07111f;
+  --blue: #3155ff;
+  --cyan: #20dde0;
+  --orange: #ff6b00;
+  --white: #f2f4f7;
+}
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--navy);
+  color: var(--white);
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+/* =========================================
+   BACKGROUND GRID
+========================================= */
+
+.background-grid {
+  position: fixed;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(49, 85, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(49, 85, 255, 0.045) 1px, transparent 1px);
+
+  background-size: 32px 32px;
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* =========================================
+   GLOW
+========================================= */
+
+.glow {
+  position: fixed;
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  pointer-events: none;
+
+  z-index: 0;
+
+  opacity: 0.15;
+}
+
+.glow-cyan {
+  width: 280px;
+  height: 280px;
+
+  background: var(--cyan);
+
+  top: 15%;
+  right: -180px;
+}
+
+.glow-blue {
+  width: 250px;
+  height: 250px;
+
+  background: var(--blue);
+
+  bottom: 10%;
+  left: -180px;
+}
+
+/* =========================================
+   MAIN INVITATION
+========================================= */
+
+.invitation {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(100%, 520px);
+
+  min-height: 100vh;
+
+  margin: auto;
+
+  padding: 28px 24px 22px;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.top-bar {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-bottom: 22px;
+
+  border-bottom: 1px solid rgba(242, 244, 247, 0.12);
+}
+
+.gce-logo {
+  width: 112px;
+
+  height: auto;
+
+  object-fit: contain;
+}
+
+.year {
+  font-size: 10px;
+
+  letter-spacing: 0.25em;
+
+  color: rgba(242, 244, 247, 0.55);
+}
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+  padding-top: 55px;
+}
+
+.eyebrow {
+  font-size: 9px;
+
+  letter-spacing: 0.25em;
+
+  color: var(--cyan);
+
+  margin-bottom: 15px;
+}
+
+.intro h1 {
+  font-size: clamp(42px, 12vw, 62px);
+
+  line-height: 0.95;
+
+  font-weight: 600;
+
+  letter-spacing: -0.055em;
+}
+
+.intro h1 span {
+  display: block;
+
+  color: var(--white);
+}
+
+.brief {
+  max-width: 390px;
+
+  margin-top: 22px;
+
+  font-size: 12px;
+
+  line-height: 1.8;
+
+  color: rgba(242, 244, 247, 0.62);
+}
+
+.brief strong {
+  color: var(--white);
+
+  font-weight: 500;
+}
+
+/* =========================================
+   GUEST SECTION
+========================================= */
+
+.guest {
+  margin-top: 35px;
+
+  position: relative;
+}
+
+/* =========================================
+   IMAGE CARD
+========================================= */
+
+.image-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  height: 350px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(32, 221, 224, 0.55);
+
+  border-radius: 7px;
+
+  background: rgba(7, 17, 31, 0.35);
+}
+
+/* =========================================
+   DOT PATTERN
+========================================= */
+
+.image-wrapper::before {
+  content: "";
+
+  position: absolute;
+
+  top: 22px;
+  left: 20px;
+
+  width: 70px;
+  height: 55px;
+
+  background-image: radial-gradient(var(--cyan) 1.2px, transparent 1.2px);
+
+  background-size: 18px 18px;
+
+  opacity: 0.7;
+
+  z-index: 1;
+}
+
+/* =========================================
+   CIRCULAR IMAGE
+========================================= */
+
+.guest-image {
+  position: absolute;
+
+  top: 32px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 180px;
+  height: 180px;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  border-radius: 50%;
+
+  border: 1px solid var(--cyan);
+
+  z-index: 3;
+
+  box-shadow:
+    0 0 0 1px rgba(49, 85, 255, 0.4),
+    0 0 25px rgba(32, 221, 224, 0.12);
+
+  transition: transform 0.4s ease;
+}
+
+/* =========================================
+   CIRCULAR FRAME
+========================================= */
+
+.image-frame {
+  position: absolute;
+
+  top: 26px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 192px;
+  height: 192px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(32, 221, 224, 0.35);
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+/* =========================================
+   CYAN DOT
+========================================= */
+
+.image-frame::after {
+  content: "";
+
+  position: absolute;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--cyan);
+
+  right: 9px;
+  top: 20px;
+
+  box-shadow: 0 0 10px var(--cyan);
+}
+
+/* =========================================
+   ORANGE CORNER
+========================================= */
+
+.image-accent {
+  position: absolute;
+
+  width: 65px;
+  height: 65px;
+
+  right: 0;
+  bottom: 0;
+
+  border-right: 2px solid var(--orange);
+
+  border-bottom: 2px solid var(--orange);
+
+  z-index: 4;
+}
+
+/* =========================================
+   GUEST INFO
+========================================= */
+
+.guest-info {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  bottom: 25px;
+
+  margin: 0;
+
+  text-align: center;
+
+  z-index: 5;
+}
+
+.guest-label {
+  display: inline-block;
+
+  padding: 7px 14px;
+
+  background: var(--blue);
+
+  font-size: 8px;
+
+  letter-spacing: 0.16em;
+
+  font-weight: 600;
+}
+
+.guest-info h2 {
+  margin-top: 13px;
+
+  font-size: 27px;
+
+  letter-spacing: -0.03em;
+}
+
+.guest-info p {
+  margin-top: 5px;
+
+  font-size: 11px;
+
+  color: rgba(242, 244, 247, 0.55);
+}
+
+/* =========================================
+   LINKS BUTTON
+========================================= */
+
+.links-section {
+  margin-top: 38px;
+}
+
+.links-button {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 18px 20px;
+
+  text-decoration: none;
+
+  color: var(--white);
+
+  border: 1px solid rgba(32, 221, 224, 0.35);
+
+  background: rgba(7, 17, 31, 0.65);
+
+  transition: 0.3s ease;
+}
+
+.links-button::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background: var(--cyan);
+}
+
+.links-button span {
+  font-size: 10px;
+
+  letter-spacing: 0.2em;
+
+  font-weight: 600;
+}
+
+.links-button strong {
+  font-size: 21px;
+
+  font-weight: 400;
+
+  color: var(--cyan);
+}
+
+.links-button:hover {
+  background: rgba(49, 85, 255, 0.12);
+
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  margin-top: auto;
+
+  padding-top: 45px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  font-size: 7px;
+
+  letter-spacing: 0.18em;
+
+  color: rgba(242, 244, 247, 0.3);
+}
+
+/* =========================================
+   LINKS PAGE
+========================================= */
+
+.links-page {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(100%, 520px);
+
+  min-height: 100vh;
+
+  margin: auto;
+
+  padding: 24px;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+.links-glow {
+  position: fixed;
+
+  width: 280px;
+  height: 280px;
+
+  top: 25%;
+  right: -190px;
+
+  border-radius: 50%;
+
+  background: var(--cyan);
+
+  filter: blur(120px);
+
+  opacity: 0.08;
+
+  pointer-events: none;
+}
+
+.links-top {
+  display: grid;
+
+  grid-template-columns: 40px 1fr 40px;
+
+  align-items: center;
+
+  padding-bottom: 22px;
+
+  border-bottom: 1px solid rgba(242, 244, 247, 0.12);
+}
+
+.links-logo {
+  width: 105px;
+
+  justify-self: center;
+}
+
+.links-year {
+  font-size: 8px;
+
+  letter-spacing: 0.2em;
+
+  color: rgba(242, 244, 247, 0.4);
+
+  justify-self: end;
+}
+
+.back-button {
+  width: 34px;
+  height: 34px;
+
+  display: grid;
+
+  place-items: center;
+
+  border: 1px solid rgba(32, 221, 224, 0.3);
+
+  color: var(--cyan);
+
+  text-decoration: none;
+
+  font-size: 17px;
+
+  transition: 0.25s ease;
+}
+
+.back-button:hover {
+  background: rgba(32, 221, 224, 0.08);
+
+  transform: translateX(-3px);
+}
+
+/* =========================================
+   LINKS INTRO
+========================================= */
+
+.links-intro {
+  padding-top: 65px;
+}
+
+.links-intro > p {
+  font-size: 9px;
+
+  letter-spacing: 0.28em;
+
+  color: var(--cyan);
+}
+
+.links-intro h1 {
+  margin-top: 16px;
+
+  font-size: clamp(48px, 13vw, 64px);
+
+  line-height: 0.95;
+
+  letter-spacing: -0.06em;
+
+  font-weight: 600;
+}
+
+.links-intro h1 span {
+  color: var(--cyan);
+}
+
+.intro-line {
+  width: 55px;
+
+  height: 2px;
+
+  margin-top: 22px;
+
+  background: var(--orange);
+}
+
+.links-intro small {
+  display: block;
+
+  max-width: 330px;
+
+  margin-top: 18px;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+
+  color: rgba(242, 244, 247, 0.5);
+}
+
+/* =========================================
+   LINKS LIST
+========================================= */
+
+.links-list {
+  margin-top: 78px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 0;
+}
+
+/* =========================================
+   LINK CARD
+========================================= */
+
+.modern-link {
+  position: relative;
+
+  width: 100%;
+  min-height: 92px;
+
+  padding: 18px 22px 18px 28px;
+
+  display: flex;
+  align-items: center;
+
+  text-decoration: none !important;
+
+  color: var(--white) !important;
+
+  border: 1px solid rgba(242, 244, 247, 0.14);
+
+  background: rgba(242, 244, 247, 0.025);
+
+  overflow: hidden;
+
+  transition: 0.3s ease;
+}
+
+/* الخط الجانبي */
+
+.modern-link::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background: var(--cyan);
+}
+
+.modern-link:nth-child(2)::before {
+  background: var(--blue);
+}
+
+.modern-link:nth-child(3)::before {
+  background: var(--orange);
+}
+
+.modern-link:nth-child(4)::before {
+  background: var(--cyan);
+}
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.link-left {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-start;
+
+  gap: 24px;
+
+  min-width: 0;
+}
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.link-number {
+  flex: 0 0 28px;
+
+  font-size: 12px;
+
+  letter-spacing: 0.05em;
+
+  color: rgba(242, 244, 247, 0.55);
+
+  text-align: left;
+}
+
+/* =========================================
+   TEXT
+========================================= */
+
+.link-left > div {
+  min-width: 0;
+
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  justify-content: center;
+
+  gap: 6px;
+}
+
+/* العنوان */
+
+.link-left strong {
+  display: block;
+
+  font-size: 12px;
+
+  line-height: 1.2;
+
+  letter-spacing: 0.08em;
+
+  font-weight: 700;
+
+  color: var(--white);
+}
+
+/* الوصف */
+
+.link-left small {
+  display: block;
+
+  font-size: 9px;
+
+  line-height: 1.4;
+
+  color: rgba(242, 244, 247, 0.45);
+}
+
+/* =========================================
+   ARROW
+========================================= */
+
+.link-icon {
+  flex: 0 0 auto;
+
+  margin-left: 15px;
+
+  font-size: 22px;
+
+  line-height: 1;
+
+  color: var(--cyan);
+
+  transition: 0.25s ease;
+}
+
+.modern-link:hover .link-icon {
+  transform: translate(3px, -3px);
+}
+
+/* =========================================
+   HOVER
+========================================= */
+
+.modern-link:hover {
+  background: rgba(32, 221, 224, 0.04);
+
+  border-color: rgba(32, 221, 224, 0.4);
+
+  transform: translateX(4px);
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .modern-link {
+    min-height: 86px;
+
+    padding: 16px 16px 16px 22px;
+  }
+
+  .link-left {
+    gap: 18px;
+  }
+
+  .link-number {
+    flex-basis: 22px;
+
+    font-size: 10px;
+  }
+
+  .link-left strong {
+    font-size: 11px;
+  }
+
+  .link-left small {
+    font-size: 8px;
+  }
+
+  .link-icon {
+    margin-left: 10px;
+
+    font-size: 19px;
+  }
+}
+
+/* =========================================
+   LINKS FOOTER
+========================================= */
+
+.links-footer {
+  margin-top: auto;
+
+  padding-top: 50px;
+}
+
+.footer-line {
+  width: 100%;
+
+  height: 1px;
+
+  margin-bottom: 15px;
+
+  background: rgba(242, 244, 247, 0.08);
+}
+
+.links-footer > div:last-child {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.links-footer span {
+  font-size: 7px;
+
+  letter-spacing: 0.18em;
+
+  color: rgba(242, 244, 247, 0.3);
+}
+
+/* =========================================
+   DESKTOP
+========================================= */
+
+@media (min-width: 700px) {
+  .invitation {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+
+  .guest {
+    margin-top: 45px;
+  }
+}
+
+/* =========================================
+   MODERN LINKS
+========================================= */
+
+.links-list {
+  margin-top: 48px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.modern-link {
+  position: relative;
+
+  width: 100%;
+  min-height: 82px;
+
+  padding: 18px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  text-decoration: none !important;
+
+  color: #f2f4f7 !important;
+
+  border: 1px solid rgba(242, 244, 247, 0.14);
+
+  background: rgba(242, 244, 247, 0.025);
+
+  overflow: hidden;
+
+  transition: 0.3s ease;
+}
+
+.modern-link::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 3px;
+  height: 100%;
+
+  background: #20dde0;
+}
+
+.modern-link:nth-child(2)::before {
+  background: #3155ff;
+}
+
+.modern-link:nth-child(3)::before {
+  background: #ff6b00;
+}
+
+.modern-link:nth-child(4)::before {
+  background: #20dde0;
+}
+
+.modern-link:hover {
+  transform: translateX(5px);
+
+  border-color: rgba(32, 221, 224, 0.5);
+
+  background: rgba(32, 221, 224, 0.04);
+}
+
+.link-left {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+.link-number {
+  min-width: 24px;
+
+  font-size: 9px;
+
+  color: rgba(242, 244, 247, 0.35);
+
+  letter-spacing: 0.1em;
+}
+
+.link-left div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.link-left strong {
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+
+  color: #f2f4f7;
+}
+
+.link-left small {
+  font-size: 9px;
+
+  color: rgba(242, 244, 247, 0.45);
+}
+
+.link-icon {
+  font-size: 23px;
+
+  font-weight: 300;
+
+  color: #20dde0;
+
+  transition: 0.25s ease;
+}
+
+.modern-link:hover .link-icon {
+  transform: translate(3px, -3px);
+}
+
+.links-header {
+  display: grid;
+  grid-template-columns: 40px 1fr auto;
+  align-items: center;
+  gap: 15px;
+
+  padding-bottom: 22px;
+
+  border-bottom: 1px solid rgba(242, 244, 247, 0.12);
+}
+
+.links-header .gce-logo {
+  width: 105px;
+  justify-self: center;
+}
+
+.links-header p {
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  color: rgba(242, 244, 247, 0.5);
+}
